@@ -8,8 +8,8 @@ const LoginForm = () => {
     const [error, setError] = useState("null");
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         setError("");
     
 
@@ -31,14 +31,14 @@ const LoginForm = () => {
                     type="email"
                     placeholder="Enter you email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(event) => setEmail(event.target.value)}
                     required
                 />
                 <input
                     type="password"
                     placeholder="Enter your password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(event) => setPassword(event.target.value)}
                     required
                 />
                 <button type="submit">Login</button>
