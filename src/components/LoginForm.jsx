@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../services/authServices";
+import "../styles/LoginForm.css"
 
 const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("null");
+    const [error, setError] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {

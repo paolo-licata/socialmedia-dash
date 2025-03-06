@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signupUser } from "../services/authServices";
+import "../styles/SignupForm.css"
 
 const SignupForm = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("null");
+    const [error, setError] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -49,7 +50,7 @@ const SignupForm = () => {
                 />
                 <button type="submit">Sign Up</button>
             </form>
-            <p>Already have an account? <a href="/login">Log In</a></p>
+            <p>Already have an account? <a href="/login">Log In!</a></p>
         </div>
     )
 }
