@@ -12,7 +12,6 @@ const LoginForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         setError("");
-    
 
         try {
             const data = await loginUser({ email, password }); // Call API Service

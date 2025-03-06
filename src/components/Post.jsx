@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { addComment } from "../services/postServices";
+import "../styles/Post.css"
 
-const Post = ({ post, onLike, onDelete }) => {
+const Post = ({ post, onLike, onDelete, token }) => {
     const [ likes, setLikes ] = useState(post.likes);
     const [ isLiked, setIsLiked ] = useState(false);
     const [ comments, setComments ] = useState(post.comments || []);
@@ -14,17 +15,27 @@ const Post = ({ post, onLike, onDelete }) => {
         onLike(post._id)
     };
 
-    const handleAddComment = () => {
+    const handleAddComment = async () => {
+        if (!token) {
+            console.error("User not authenticated");
+            return;
+          }
+
         if (newComment.trim() === "") return;
 
-        const newCommentObject = {
-            userId: "currentUserId",
-            text: newComment,
-            createdAt: new Date().toISOString()
+        const commentData = {
+            text: newComment
         };
 
-        setComments({...comments, newCommentObject});
-        setNewComment("");
+        try {
+            const updatedPost = await addComment(post._id, commentData, token);
+            if (updatedPost.comments) {
+                setComments(updatedPost.comments);
+            }
+            setNewComment("")
+        } catch (error) {
+            console.error("Error while adding comment:", error.message)
+        }
     }
 
     return (
@@ -51,7 +62,7 @@ const Post = ({ post, onLike, onDelete }) => {
                 {comments.length > 0 ? (
                     comments.map((comment, index) => (
                         <div key={index} className="comment">
-                            <strong>{comment.userId.name || "User"}</strong>: {comment.text}
+                            <strong>{comment.userId.username || "User"}</strong>: {comment.text}
                         </div>
                     ))
                 ) : (
