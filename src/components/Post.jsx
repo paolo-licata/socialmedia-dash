@@ -49,11 +49,6 @@ const Post = ({ post, onLike, onDelete, token }) => {
                 <button className={isLiked ? "liked" : ""} onClick={handleLike}>
                     {isLiked ? "❤️" : "🤍"} {likes}
                 </button>
-                {onDelete && (
-                    <button className="delete-btn" onClick={() => onDelete(post._id)}>
-                        Delete
-                    </button>
-                )}
             </div>
 
             {/* Comment section */}
@@ -77,7 +72,7 @@ const Post = ({ post, onLike, onDelete, token }) => {
                         value={newComment}
                         onChange={(event) => setNewComment(event.target.value)}                    
                     />
-                    <button onClick={handleAddComment}>Post</button>
+                    <button onClick={handleAddComment} className="material-icons">&#xe163;</button>
                 </div>
             </div>
         </div>
