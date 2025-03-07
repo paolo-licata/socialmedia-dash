@@ -2,7 +2,7 @@ import { useState } from "react";
 import { addComment } from "../services/postServices";
 import "../styles/Post.css"
 
-const Post = ({ post, onLike, onDelete, token }) => {
+const Post = ({ post, onLike, token }) => {
     const [ likes, setLikes ] = useState(post.likes);
     const [ isLiked, setIsLiked ] = useState(false);
     const [ comments, setComments ] = useState(post.comments || []);
