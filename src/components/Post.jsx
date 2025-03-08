@@ -4,7 +4,7 @@ import { jwtDecode } from "jwt-decode";
 import "../styles/Post.css"
 
 const Post = ({ post, onLike, token }) => {
-    
+
     let currentUserId = null;
     if (token) {
         try {
@@ -44,12 +44,19 @@ const Post = ({ post, onLike, token }) => {
             text: newComment
         };
 
+        const newCommentObj = {
+            userId: { username: "You" },
+            text: newComment
+        };
+
+        setComments([...comments, newCommentObj]); //Adds the new comment immediately
+        setNewComment("");
+
         try {
             const updatedPost = await addComment(post._id, commentData, token);
             if (updatedPost.comments) {
                 setComments(updatedPost.comments);
             }
-            setNewComment("")
         } catch (error) {
             console.error("Error while adding comment:", error.message)
         }
