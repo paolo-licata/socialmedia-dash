@@ -1,14 +1,22 @@
-.create-post {
+.dashboard {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    max-width: 700px;
+}
+
+.create-post {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 520px;
     background-color: #1f1f1f;
     color: #f5f5f5;
     padding: 15px;
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px #df86001a;
+    box-shadow: 2px 6px 8px 4px #df86001a;
 }
 
 .create-post h3 {
@@ -17,7 +25,9 @@
 
 .create-post textarea,
 .create-post input {
+    font-family:Arial, Helvetica, sans-serif;
     width: 100%;
+    max-width: 500px;
     padding: 10px;
     margin-bottom: 15px;
     border: none;

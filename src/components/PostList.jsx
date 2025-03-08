@@ -45,7 +45,7 @@ const PostList = () => {
     }, []);
 
     return (
-        <div>
+        <div className="dashboard">
             {/* Post creation form */}
             <div className="create-post">
                 <h3>Create a New Post</h3>
