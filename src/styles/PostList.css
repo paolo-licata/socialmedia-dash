@@ -8,7 +8,7 @@
     padding: 15px;
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px #ff408041;
+    box-shadow: 0 4px 8px #df86001a;
 }
 
 .create-post h3 {
@@ -27,14 +27,15 @@
 }
 
 .create-post button {
-    background-color: #ff4081;
+    font-size: 15px;
+    background-color: #df8600;
     color: white;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .create-post button:hover {
-    background-color: #c60055;
+    background-color: #c66300;
 }

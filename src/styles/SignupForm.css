@@ -3,7 +3,7 @@
     background-color: #1e1e1e;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 2px 6px 12px rgba(255, 255, 255, 0.1);
+    box-shadow: 2px 6px 12px #df86001a;
     text-align: center;
     width: 400px;
   }
@@ -30,13 +30,13 @@
   }
   
   .signup-container input:focus {
-    outline: 2px solid #ff4081;
+    outline: 2px solid #df8600;
   }
   
   .signup-container button {
     margin-top: 15px;
     padding: 10px;
-    background-color: #ff4081;
+    background-color: #df8600;
     border: none;
     border-radius: 5px;
     color: white;
@@ -46,7 +46,7 @@
   }
   
   .signup-container button:hover {
-    background-color: #c60055;
+    background-color: #c66300;
   }
   
   .signup-container .error-message {
@@ -60,7 +60,7 @@
   }
   
   .signup-container a {
-    color: #ff4081;
+    color: #df8600;
     text-decoration: none;
   }
   

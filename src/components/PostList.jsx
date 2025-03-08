@@ -36,7 +36,7 @@ const PostList = () => {
         const fetchPosts = async () => {
             try {
                 const data = await getPosts();
-                setPosts(data);
+                setPosts(data.reverse());
             } catch (error) {
                 console.log("Error fetching posts: ", error);
             }
