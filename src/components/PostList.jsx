@@ -5,7 +5,7 @@ import "../styles/PostList.css"
 
 const PostList = () => {
     const [ posts, setPosts ] = useState([]);
-    const [ newPost, setNewPost] = useState({ description:"", imageUrl:""})
+    const [ newPost, setNewPost] = useState({ description:"", imageUrl:""});
     const [error, setError] = useState("");
     const token = localStorage.getItem("token");
 

@@ -1,18 +1,35 @@
 import { useState } from "react";
-import { addComment } from "../services/postServices";
+import { addComment, likePost } from "../services/postServices";
+import { jwtDecode } from "jwt-decode";
 import "../styles/Post.css"
 
 const Post = ({ post, onLike, token }) => {
-    const [ likes, setLikes ] = useState(post.likes);
-    const [ isLiked, setIsLiked ] = useState(false);
+    
+    let currentUserId = null;
+    if (token) {
+        try {
+            const decodedToken = jwtDecode(token);
+            currentUserId = decodedToken.id;
+        } catch (error) {
+            console.error("Error decoding token", error);
+        }
+    }
+
+    const [ likes, setLikes ] = useState(post.likes.length);
+    const [ isLiked, setIsLiked ] = useState(post.likes.includes(currentUserId));
     const [ comments, setComments ] = useState(post.comments || []);
     const [ newComment, setNewComment] = useState("");
 
-    const handleLike = () => {
-        setIsLiked(!isLiked);
-        const newLikes = isLiked ? likes - 1 : likes + 1;
-        setLikes(newLikes);
-        onLike(post._id)
+    const handleLike = async () => {
+        try {
+            const response = await likePost(post._id, token);
+            if (response) {
+                setIsLiked(!isLiked);
+                setLikes(response.likes);
+            }
+        } catch (error) {
+            console.log("Error while liking/unliking post", error)
+        }
     };
 
     const handleAddComment = async () => {
