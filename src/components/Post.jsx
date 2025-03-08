@@ -64,13 +64,13 @@ const Post = ({ post, onLike, token }) => {
 
     return (
         <div className="post">
-            <h3>{post.userId.username}</h3>
+            <p><span className="username"><strong>{post.userId.username}</strong></span> posted: </p>
             <p>{post.description}</p>
 
             {post.imageUrl && <img src={post.imageUrl} alt="Post" className="post-image" />}
 
             <div className="post-actions">
-                <button className={isLiked ? "liked" : ""} onClick={handleLike}>
+                <button className={isLiked ? "liked" : ""} onClick={handleLike} id="like-button">
                     {isLiked ? "❤️" : "🤍"} {likes}
                 </button>
             </div>

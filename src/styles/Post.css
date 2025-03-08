@@ -9,8 +9,8 @@
     box-shadow: 2px 6px 8px 4px #19b6dd33;
 }
 
-.post h3 {
-    color: #f5f5f5;
+.username {
+    color: #37a5a5;
     margin-bottom: 10px;
 }
 
@@ -33,7 +33,7 @@
     margin-top: 10px;
 }
 
-button {
+#like-button {
     background-color: transparent;
     font-size: 18px;
     color: white;
@@ -44,7 +44,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+#like-button:hover {
     background-color: #272727;
 }
 

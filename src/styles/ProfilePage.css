@@ -1,0 +1,60 @@
+.profile-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 2px 6px 8px 4px #19b6dd33;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input {
+    width: 97%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+button {
+    padding: 8px 15px;
+    margin-top: 10px;
+    margin: 10px;
+    background-color: #37a5a5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: #2c8f8f;
+    transition: 0.2s;
+}
+
+.delete-btn {
+    background-color: #c62a2a;
+    margin-top: 15px;
+}
+
+.delete-btn:hover {
+    background-color: #a10909;
+}
+
+.error-message {
+    color: #c62a2a;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: #0bae0b;
+    margin-top: 5px;
+}

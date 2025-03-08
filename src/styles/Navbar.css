@@ -11,7 +11,7 @@
 }
 
 .app-name {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .navbar-elements {
@@ -29,6 +29,11 @@
 #profile:hover {
     transform: scale(1.2);
     transition: 0.2s;
+}
+
+#logout {
+    background-color: transparent;
+    margin: 0;
 }
 
 #logout:hover {

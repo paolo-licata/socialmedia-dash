@@ -3,6 +3,7 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import PostList from "./components/PostList";
 import Navbar from "./components/Navbar";
+import ProfilePage from "./components/ProfilePage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/dashboard" element={<PostList />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </Router>
   );

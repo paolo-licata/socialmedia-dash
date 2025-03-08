@@ -36,7 +36,7 @@
     color: white;
 }
 
-.create-post button {
+#post-btn {
     font-size: 15px;
     background-color: #df8600;
     color: white;
@@ -46,6 +46,6 @@
     cursor: pointer;
 }
 
-.create-post button:hover {
+#post-btn:hover {
     background-color: #c66300;
 }

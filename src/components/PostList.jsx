@@ -63,7 +63,7 @@ const PostList = () => {
                         value={newPost.imageUrl}
                         onChange={(event) => setNewPost({ ...newPost, imageUrl: event.target.value })}
                     />
-                    <button type="submit">Post</button>
+                    <button type="submit" id="post-btn">Post</button>
                 </form>
             </div>
 
