@@ -19,6 +19,7 @@ const Post = ({ post, onLike, token }) => {
     const [ isLiked, setIsLiked ] = useState(post.likes.includes(currentUserId));
     const [ comments, setComments ] = useState(post.comments || []);
     const [ newComment, setNewComment] = useState("");
+    const [ showComments, setShowComments] = useState(false);
 
     const handleLike = async () => {
         try {
@@ -61,7 +62,7 @@ const Post = ({ post, onLike, token }) => {
             console.error("Error while adding comment:", error.message)
         }
     }
-
+    
     return (
         <div className="post">
             <p><span className="username">
@@ -75,32 +76,39 @@ const Post = ({ post, onLike, token }) => {
                 <button className={isLiked ? "liked" : ""} onClick={handleLike} id="like-button">
                     {isLiked ? "❤️" : "🤍"} {likes}
                 </button>
+                {/* Button to toggle comments visibility */}
+                <button id="comment-button" onClick={() => setShowComments(!showComments)}>
+                    <span className="material-icons">chat_bubble</span>
+                    {comments.length > 0 && <span className="comments-count">{comments.length}</span>}
+                </button>
             </div>
 
-            {/* Comment section */}
-            <div className="comments-section">
-                <h4>Comments</h4>
-                {comments.length > 0 ? (
-                    comments.map((comment, index) => (
-                        <div key={index} className="comment">
-                            <strong>{comment.userId?.username || "User"}</strong>: {comment.text}
-                        </div>
-                    ))
-                ) : (
-                    <p>No comments yet.</p>
-                )}
+            {/* Comment section when showComments is true */}
+            {showComments && (
+                <div className="comments-section">
+                    <h4>Comments</h4>
+                    {comments.length > 0 ? (
+                        comments.map((comment, index) => (
+                            <div key={index} className="comment">
+                                <strong>{comment.userId?.username || "User"}</strong>: {comment.text}
+                            </div>
+                        ))
+                    ) : (
+                        <p>No comments yet.</p>
+                    )}
 
-                {/* Add a comment */}
-                <div className="add-comment">
-                    <input
-                        type="text"
-                        placeholder="Write a comment..."
-                        value={newComment}
-                        onChange={(event) => setNewComment(event.target.value)}                    
-                    />
-                    <button onClick={handleAddComment} className="material-icons">&#xe163;</button>
+                    {/* Add a comment */}
+                    <div className="add-comment">
+                        <input
+                            type="text"
+                            placeholder="Write a comment..."
+                            value={newComment}
+                            onChange={(event) => setNewComment(event.target.value)}                    
+                        />
+                        <button onClick={handleAddComment} className="material-icons">&#xe163;</button>
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     )
 }
