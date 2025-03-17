@@ -64,7 +64,9 @@ const Post = ({ post, onLike, token }) => {
 
     return (
         <div className="post">
-            <p><span className="username"><strong>{post.userId.username}</strong></span> posted: </p>
+            <p><span className="username">
+                    <strong>{post.userId ? post.userId.username : "Deleted user"}</strong>
+                </span> posted: </p>
             <p>{post.description}</p>
 
             {post.imageUrl && <img src={post.imageUrl} alt="Post" className="post-image" />}
@@ -81,7 +83,7 @@ const Post = ({ post, onLike, token }) => {
                 {comments.length > 0 ? (
                     comments.map((comment, index) => (
                         <div key={index} className="comment">
-                            <strong>{comment.userId.username || "User"}</strong>: {comment.text}
+                            <strong>{comment.userId?.username || "User"}</strong>: {comment.text}
                         </div>
                     ))
                 ) : (

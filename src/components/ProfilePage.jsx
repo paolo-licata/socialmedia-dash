@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { getUser, updateUser, deleteUser } from "../services/authServices";
 import "../styles/ProfilePage.css"
 
-const ProfilePage = ({ token, onLogout}) => {
+const ProfilePage = ({ onLogout }) => {
     const [ userData, setUserData ] = useState({
         username: "",
         email: "",
         password: ""
     });
-    const [ error, setError ] = useState("")
+    const token = localStorage.getItem("token");
+    const [ error, setError ] = useState("");
     const [ successMessage, setSuccessMessage ] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -55,8 +58,9 @@ const ProfilePage = ({ token, onLogout}) => {
 
         try {
             await deleteUser(token);
-            alert("Account delete successfully!")
-            onLogout();
+            alert("Account delete successfully!");
+            localStorage.removeItem("token");
+            navigate("/signup")
         } catch (error) {
             setError(error.message);
         }
@@ -90,7 +94,7 @@ const ProfilePage = ({ token, onLogout}) => {
             </div>
 
             <div className="form-group">
-                <label>Username</label>
+                <label>Password</label>
                 <input 
                     type="password" 
                     name="password"

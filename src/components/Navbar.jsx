@@ -27,10 +27,10 @@ const Navbar = () => {
                 {token ? (
                     <>
                         <Link to="/profile" className="material-icons" id="profile">
-                            <span class="material-symbols-outlined">account_circle</span>
+                            <span className="material-symbols-outlined">account_circle</span>
                         </Link>
                         <button onClick={handleLogout} className="material-icons" id="logout">
-                            <span class="material-symbols-outlined">power_settings_new</span>
+                            <span className="material-symbols-outlined">power_settings_new</span>
                         </button>
                     </>
                 ) : (
