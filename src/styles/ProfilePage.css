@@ -5,7 +5,7 @@
     background-color: #1f1f1f;
     color: #f5f5f5;
     border-radius: 10px;
-    box-shadow: 2px 6px 8px 4px #19b6dd33;
+    border: 1px solid #333;
     text-align: center;
 }
 
@@ -49,7 +49,21 @@ button:hover {
     background-color: #a10909;
 }
 
+.back-btn {
+    margin-top: 15px;
+}
+
+.back-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.back-btn a:hover {
+    text-decoration: underline;
+}
+
 .error-message {
+
     color: #c62a2a;
     margin-top: 5px;
 }

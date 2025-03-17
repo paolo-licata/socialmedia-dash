@@ -68,7 +68,7 @@ const ProfilePage = ({ onLogout }) => {
 
     return (
         <div className="profile-container">
-            <h2>Edit Profile</h2>
+            <h2>Profile info and editing</h2>
 
             {error && <p className="error-message">{error}</p>}
             {successMessage && <p className="success-message">{successMessage}</p>}
@@ -106,7 +106,9 @@ const ProfilePage = ({ onLogout }) => {
 
             <button onClick={handleUpdate}>Update Profile</button>
             <button onClick={handleDeleteAccount} className="delete-btn">Delete account</button>
-
+            <div className="back-btn">
+                <a href="/dashboard"><span className="material-icons">arrow_back</span>Back to dashboard</a>
+            </div>
         </div>
     )
 }
