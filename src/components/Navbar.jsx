@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="app-name">
-                <h2>Night Owls</h2>
+                <h2>Techgram</h2>
             </div>
 
             <div className="navbar-elements">
