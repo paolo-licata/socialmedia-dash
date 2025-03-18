@@ -46,7 +46,7 @@
 }
 
 #like-button:hover {
-    background-color: #272727;
+    background-color: #39344694;
 }
 
 .liked {
@@ -65,7 +65,7 @@
 }
 
 #comment-button:hover {
-    background-color: #272727;
+    background-color: #39344694;
 }
 
 .material-icons {
@@ -86,7 +86,7 @@
 }
 
 .comment {
-    background-color: #212121;
+    background-color: #3730508d;
     margin: 10px 0;
     padding: 10px;
     border-radius: 8px;

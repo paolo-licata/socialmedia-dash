@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     background: linear-gradient(120deg, #333, #251a4f);
+    padding: 20px 10px;
 }
 
 .create-post {
@@ -11,11 +12,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 520px;
+    width: 100%;
+    max-width: 520px;
     background-color: transparent;
     color: #f5f5f5;
     padding: 15px;
-    margin-top: 20px;
     border-bottom: 1px solid #dfdfdf;
 }
 
@@ -62,3 +63,47 @@
     background-color: #f0efef;
     color: #333;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+    .create-post {
+      width: 90%;
+    }
+  
+    .create-post h3 {
+      font-size: 1.5rem;
+    }
+  
+    .create-post textarea,
+    .create-post input {
+      font-size: 0.9rem;
+    }
+  
+    #post-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .create-post {
+      width: 80%;
+    }
+  
+    .create-post h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+  
+    .create-post textarea,
+    .create-post input {
+      font-size: 0.85rem;
+      padding: 8px;
+    }
+  
+    #post-btn {
+      font-size: 13px;
+      padding: 7px 14px;
+    }
+  }
