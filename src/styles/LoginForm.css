@@ -1,24 +1,31 @@
 .container {
+  min-height: 100lvh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(120deg, #333, #251a4f);
 }
 
 .login-container {
-    margin-top: 100px;
-    background-color: #1e1e1e;
+    background-color: transparent;
+    border: 2px solid white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 2px 6px 12px #00bcd41a;
     text-align: center;
     width: 400px;
+    height: auto;
   }
   
   .login-container h2 {
     margin-bottom: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.8rem;
-    color: #ffffff;
+    background: linear-gradient(180deg, #fdcee1, #fe93a5, #b281f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   
   .login-container form {
@@ -30,22 +37,23 @@
     padding: 10px;
     margin: 15px 0;
     border: none;
-    border-radius: 5px;
-    background-color: #2c2c2c;
-    color: white;
+    border-radius: 8px;
+    background-color: #dfdfdf;
+    color: #333;
     font-size: 1rem;
   }
   
   .login-container input:focus {
-    outline: 2px solid #00bcd4;
+    outline: 2px solid #fdcee1;
   }
   
   .login-container button {
     margin-top: 15px;
-    padding: 10px;
-    background-color: #00bcd4;
-    border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -53,7 +61,8 @@
   }
   
   .login-container button:hover {
-    background-color: #008ba3;
+    background-color: #f3f4f6;
+    color: #333;
   }
   
   .login-container .error-message {
@@ -67,7 +76,7 @@
   }
   
   .login-container a {
-    color: #00bcd4;
+    color: #b281f1;
     text-decoration: none;
   }
   

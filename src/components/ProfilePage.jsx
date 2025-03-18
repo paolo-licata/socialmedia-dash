@@ -67,47 +67,49 @@ const ProfilePage = ({ onLogout }) => {
     }
 
     return (
-        <div className="profile-container">
-            <h2>Profile info and editing</h2>
+        <div className="profile-page">
+            <div className="profile-container">
+                <h2>Account information</h2>
 
-            {error && <p className="error-message">{error}</p>}
-            {successMessage && <p className="success-message">{successMessage}</p>}
+                {error && <p className="error-message">{error}</p>}
+                {successMessage && <p className="success-message">{successMessage}</p>}
 
-            <div className="form-group">
-                <label>Username</label>
-                <input 
-                    type="text"
-                    name="username"
-                    value={userData.username}
-                    onChange={handleChange}
-                />
-            </div>
+                <div className="form-group">
+                    <label>Username</label>
+                    <input 
+                        type="text"
+                        name="username"
+                        value={userData.username}
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <div className="form-group">
-                <label>Email</label>
-                <input 
-                    type="email"
-                    name="email"
-                    value={userData.email}
-                    onChange={handleChange}
-                />
-            </div>
+                <div className="form-group">
+                    <label>Email</label>
+                    <input 
+                        type="email"
+                        name="email"
+                        value={userData.email}
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <div className="form-group">
-                <label>Password</label>
-                <input 
-                    type="password" 
-                    name="password"
-                    value={userData.password}
-                    onChange={handleChange}
-                    placeholder="Enter a new password"
-                />
-            </div>
+                <div className="form-group">
+                    <label>Password</label>
+                    <input 
+                        type="password" 
+                        name="password"
+                        value={userData.password}
+                        onChange={handleChange}
+                        placeholder="Enter a new password"
+                    />
+                </div>
 
-            <button onClick={handleUpdate}>Update Profile</button>
-            <button onClick={handleDeleteAccount} className="delete-btn">Delete account</button>
-            <div className="back-btn">
-                <a href="/dashboard"><span className="material-icons">arrow_back</span>Back to dashboard</a>
+                <button onClick={handleUpdate}>Update Profile</button>
+                <button onClick={handleDeleteAccount} className="delete-btn">Delete account</button>
+                <div className="back-btn">
+                    <a href="/dashboard"><span className="material-icons">arrow_back</span>Back to dashboard</a>
+                </div>
             </div>
         </div>
     )

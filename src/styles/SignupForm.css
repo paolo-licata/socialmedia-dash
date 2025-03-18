@@ -6,19 +6,23 @@
 }
 
 .signup-container {
-    margin-top: 100px;
-    background-color: #1e1e1e;
+    background-color: transparent;
+    border: 2px solid rgb(224, 224, 224);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 2px 6px 12px #df86001a;
     text-align: center;
     width: 400px;
   }
   
   .signup-container h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 1rem;
     font-size: 1.8rem;
-    color: #ffffff;
+    background: linear-gradient(180deg, #fdcee1, #fe93a5, #b281f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   
   .signup-container form {
@@ -30,22 +34,22 @@
     padding: 10px;
     margin: 15px 0;
     border: none;
-    border-radius: 5px;
-    background-color: #2c2c2c;
-    color: white;
+    border-radius: 8px;
+    background-color: #dfdfdf;
+    color: #333;
     font-size: 1rem;
   }
   
   .signup-container input:focus {
-    outline: 2px solid #df8600;
+    outline: 2px solid #fdcee1;
   }
   
   .signup-container button {
     margin-top: 15px;
     padding: 10px;
-    background-color: #df8600;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -53,7 +57,7 @@
   }
   
   .signup-container button:hover {
-    background-color: #c66300;
+    background-color: #b281f1;
   }
   
   .signup-container .error-message {
@@ -67,7 +71,7 @@
   }
   
   .signup-container a {
-    color: #df8600;
+    color: #b281f1;
     text-decoration: none;
   }
   

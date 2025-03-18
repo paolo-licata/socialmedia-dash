@@ -1,12 +1,29 @@
+.profile-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(120deg, #333, #251a4f);
+}
+
 .profile-container {
-    max-width: 500px;
-    margin: 50px auto;
+    width: 50vh;
     padding: 20px;
-    background-color: #1f1f1f;
+    background: transparent;
     color: #f5f5f5;
-    border-radius: 10px;
-    border: 1px solid #333;
+    border-radius: 8px;
+    border: 1px solid #dfdfdf;
     text-align: center;
+}
+
+.profile-container h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #fdcee1, #fe93a5, #b281f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .form-group {
@@ -20,33 +37,35 @@ input {
     margin-top: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #2c2c2c;
-    color: white;
+    background-color: #dfdfdf;
+    color: #333;
 }
 
 button {
     padding: 8px 15px;
-    margin-top: 10px;
     margin: 10px;
-    background-color: #37a5a5;
-    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid #dfdfdf;
     border-radius: 5px;
     cursor: pointer;
     color: white;
 }
 
 button:hover {
-    background-color: #2c8f8f;
+    background-color: #ececec;
+    color: #333;
     transition: 0.2s;
 }
 
 .delete-btn {
-    background-color: #c62a2a;
+    background-color: transparent;
     margin-top: 15px;
 }
 
 .delete-btn:hover {
-    background-color: #a10909;
+    background-color: #f03c3c;
+    color: #ececec;
 }
 
 .back-btn {

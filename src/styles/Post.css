@@ -1,16 +1,18 @@
 /* Post Card */
 .post {
-    background-color: #1f1f1f;
+    background-color: transparent;
     color: #f5f5f5;
     max-width: 700px;
     padding: 15px;
     border-radius: 10px;
     margin: 40px 0;
-    box-shadow: 2px 6px 8px 4px #255f6d33;
+    box-shadow: 
+        2px 8px 16px #d9a8cf66,
+        6px 8px 10px #a088c066;
 }
 
 .username {
-    color: #37a5a5;
+    color: #fe93a5;
     margin-bottom: 10px;
 }
 
@@ -75,7 +77,7 @@
 /* Comment Section */
 .comments-section {
     margin-top: 20px;
-    border-top: 1px solid #333;
+    border-top: 1px solid #dfdfdf;
     padding-top: 10px;
 }
 
@@ -98,27 +100,29 @@
 }
 
 .add-comment input {
-    background-color: #2c2c2c;
-    color: #f5f5f5;
+    background-color: #dfdfdf;
+    color: #333;
     border: 1px solid #333;
     width: 80%;
-    height: 25px;
-    margin: 10px;
     padding: 8px;
     border-radius: 8px;
 }
 
+.add-comment input:focus {
+    outline: 2px solid #fdcee1;
+}
+
 .add-comment button {
-    background-color: #37a5a5;
+    background-color: transparent;
     color: white;
-    border: none;
+    border: 1px solid #f5f5f5;
     cursor: pointer;
-    height: 41px;
     padding: 8px 16px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
 .add-comment button:hover {
-    background-color: #2c8f8f;
+    background-color: white;
+    color: #333;
 }
