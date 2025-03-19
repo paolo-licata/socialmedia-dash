@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from "../services/authServices";
 import "../styles/LoginForm.css"
 
@@ -44,7 +44,7 @@ const LoginForm = () => {
                     />
                     <button type="submit">Login</button>
                 </form>
-                <p>Don't have an account yet? <a href="/signup">Sign up!</a></p>
+                <p>Don't have an account yet? <Link href="/signup">Sign up!</Link></p>
             </div> 
         </div>       
       );
