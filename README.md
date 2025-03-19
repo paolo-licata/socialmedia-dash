@@ -4,11 +4,11 @@
 Techgram is a community-driven platform where tech enthusiasts share the latest news, gaming updates, PC builds, and development insights. Join us to stay updated and engage with like-minded people!
 
 ## Features
-✅ **User Authentication**: Register and log in securely
-✅ **Create Posts**: Share pictures, descriptions, and thoughts
-✅ **Engagement**: Like and comment on other post
-✅ **Profile Management**: Update personal information
-✅**Account Control**: Delete your account if needed
+- ✅ **User Authentication**: Register and log in securely
+- ✅ **Create Posts**: Share pictures, descriptions, and thoughts
+- ✅ **Engagement**: Like and comment on other post
+- ✅ **Profile Management**: Update personal information
+- ✅**Account Control**: Delete your account if needed
 
 ## Tech stack
 - **Frontend**: React, CSS
