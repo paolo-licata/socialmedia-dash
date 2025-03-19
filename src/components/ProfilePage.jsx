@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { getUser, updateUser, deleteUser } from "../services/authServices";
 import "../styles/ProfilePage.css"
 
@@ -108,7 +108,7 @@ const ProfilePage = ({ onLogout }) => {
                 <button onClick={handleUpdate}>Update Profile</button>
                 <button onClick={handleDeleteAccount} className="delete-btn">Delete account</button>
                 <div className="back-btn">
-                    <a href="/dashboard"><span className="material-icons">arrow_back</span>Back to dashboard</a>
+                    <Link to="/dashboard"><span className="material-icons">arrow_back</span>Back to dashboard</Link>
                 </div>
             </div>
         </div>
